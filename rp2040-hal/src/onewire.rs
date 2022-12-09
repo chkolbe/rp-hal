@@ -1,6 +1,5 @@
 use core::cell::RefCell;
 use core::convert::Infallible;
-use defmt::*;
 
 use hal::onewire::{Command, OneMaster, RomId};
 
@@ -49,7 +48,7 @@ impl<D: DelayUs<u32> + DelayMs<u32>, I: PinId> OneMaster for OneWire<'_, D, I> {
         self.delay.borrow_mut().delay_us(390);
 
         self.pin = Option::Some(ow_pin);
-        info!("Sensor Present: {}", bus_sensor_present);
+
         Ok(())
     }
 
@@ -124,8 +123,6 @@ impl<D: DelayUs<u32> + DelayMs<u32>, I: PinId> OneMaster for OneWire<'_, D, I> {
                 self.pin = Option::Some(ow_pin);
             });
         });
-
-        info!("{}", buffer);
         Ok(())
     }
 }
