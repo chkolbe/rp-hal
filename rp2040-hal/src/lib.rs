@@ -43,6 +43,7 @@ pub mod usb;
 pub mod vector_table;
 pub mod watchdog;
 pub mod xosc;
+pub mod onewire;
 
 // Provide access to common datastructures to avoid repeating ourselves
 pub use adc::Adc;
