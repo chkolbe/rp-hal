@@ -20,7 +20,6 @@ rp2040-boot2 = { version = "0.2.0", optional = true }
 fugit = "0.3.5"
 panic-halt= "0.2.0"
 embedded-hal ="0.2.7"
-eh1_0_alpha = { package = "embedded-hal", version = "=1.0.0-alpha.9",  optional = true }
 nb = "1.0"
 
 [features]
